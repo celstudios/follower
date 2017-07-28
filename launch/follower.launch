@@ -1,0 +1,9 @@
+<launch>
+  <param name="Kp" type="double" value="0.01" />
+  <param name="Ki" type="double" value="0.0005" />
+  <param name="Kd" type="double" value="0.0" />
+
+  <include file="$(find jet_bringup)/launch/jet_real.launch"/>
+  <node name="human_detector" pkg="follower" type="human_detector"/>
+  <node name="human_pid" pkg="follower" type="human_pid"/>
+</launch>
